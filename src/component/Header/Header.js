@@ -69,7 +69,7 @@ export default function PrimarySearchAppBar() {
   const [inputText, setInputText] = React.useState("");
 
   const cartItems = useSelector((store) => store.cart.itemsList);
-  const total = useSelector((store) => store.cart.totalQuantity);
+  const total = useSelector((store) => store.cart.totalAllQuatity);
   const totalPrice = useSelector((store) => store.cart.totalAllPrice);
   // console.log(cartItems);
   const testtotal = useSelector((store) => store.cart);

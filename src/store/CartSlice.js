@@ -47,10 +47,10 @@ const cartSlice = createSlice({
       let selectedIndex = state.productList.findIndex(
         (data) => data.id === action.payload.id
       );
-      console.log(selectedIndex);
+    
       let temp = state.productList;
       temp[selectedIndex].btn_disable = true;
-      console.log(temp);
+   
 
       state.productList = temp;
       // setProductData(state.productList);
@@ -60,10 +60,10 @@ const cartSlice = createSlice({
       let selectedIndex = state.productList.findIndex(
         (data) => data.id === action.payload.id
       );
-      console.log(selectedIndex);
+   
       let temp = state.productList;
       temp[selectedIndex].btn_disable = false;
-      console.log(temp);
+    
 
       state.productList = temp;
       // setProductData(state.productList);
@@ -94,10 +94,9 @@ const cartSlice = createSlice({
     fullCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.itemsList.reduce(
         (cartTotal, cartItem) => {
-          console.log("carttotal", cartTotal);
-          console.log("cartitem", cartItem);
+        
           const { mrp, quantity } = cartItem;
-          console.log(mrp, quantity);
+       
           const itemTotal = mrp * quantity;
           cartTotal.totalPrice += itemTotal;
           cartTotal.totalQuantity += quantity;

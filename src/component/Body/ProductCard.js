@@ -17,7 +17,7 @@ export default function Products() {
   useEffect(() => {
     setMedicineText(searchedDatafromStore);
   }, [searchedDatafromStore]);
-  console.log(medicineText);
+ 
 
   const addingItemsToCart = (e, item) => {
     dispatch(disableAddToCartBtn(item));
